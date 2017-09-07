@@ -21,7 +21,6 @@ public class FileWorker {
         for(String item: linesFromFile) {
             subsstringsCout += getCountSubstringInString(item, pattern);
         }
-
         System.out.println(subsstringsCout);
     }
 
