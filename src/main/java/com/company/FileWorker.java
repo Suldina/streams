@@ -12,7 +12,9 @@ import static java.lang.String.format;
 
 public class FileWorker {
     public static void main(String[] args) throws IOException {
-        String fileName = "src/main/resources/chr1.sjubst.fa";
+        String fileName = "chr1.subst.fa";
+        String fileName2 = "chr2.subst.csv"
+
         String pattern = "AGAAGGGA";
         int subsstringsCout = 0;
 
@@ -27,7 +29,7 @@ public class FileWorker {
     public static List<String> readFromFile(String fileName) throws IOException{
         List<String> linkedList = new LinkedList<>();
 
-        try (BufferedReader bfreader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)))) {
+        try (BufferedReader bfreader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName2)))) {
             String strLine;
             while ((strLine = bfreader.readLine()) != null) {
                 linkedList.add(strLine);
